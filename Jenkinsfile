@@ -14,7 +14,7 @@ pipeline {
 
         stage('Terraform Init') {
             steps {
-                sh 'cd terraform'
+                sh 'cd /home/ubuntu/terraform-aws-ec2/terraform'
                 sh 'terraform init'
             }
         }
