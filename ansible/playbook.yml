@@ -1,0 +1,11 @@
+- name: Configure EC2
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install updates
+      apt:
+        update_cache: yes
+    - name: Install Apache2
+      apt:
+        name: apache2
+        state: present
